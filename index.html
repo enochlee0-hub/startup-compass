@@ -123,6 +123,78 @@ details p{margin-top:12px;color:var(--mute);font-size:.95rem}
 footer{background:#081726;color:#8ea3b8;text-align:center;padding:30px 20px;font-size:.85rem}
 footer a{color:var(--amber)}
 
+/* menu toggle */
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:#fff;border-radius:8px;padding:6px 10px;font-size:1rem;cursor:pointer}
+nav ul.open{display:flex!important;flex-direction:column;gap:0;position:absolute;top:60px;left:0;right:0;background:#0f2a43;padding:8px 20px 16px;border-top:1px solid rgba(255,255,255,.12)}
+nav ul.open a{display:block;padding:12px 0;font-size:1rem}
+
+/* books */
+.shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:26px 22px}
+.book .cv{aspect-ratio:380/538;border-radius:5px 10px 10px 5px;overflow:hidden;background:#10212f;box-shadow:0 12px 26px rgba(15,42,67,.24),inset 5px 0 0 rgba(255,255,255,.07);transition:.3s}
+.book .cv img{width:100%;height:100%;object-fit:cover;display:block}
+.book:hover .cv{transform:translateY(-7px) rotate(-1deg)}
+.book h3{font-size:.98rem;color:var(--navy);margin:14px 0 4px;line-height:1.35}
+.book p{font-size:.84rem;color:var(--mute);line-height:1.5}
+.note{font-size:.86rem;color:var(--mute);margin-top:28px}
+
+/* workspace */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:34px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 16px;text-align:center}
+.kpi b{display:block;font-size:1.7rem;color:var(--navy);line-height:1.2}
+.kpi b small{font-size:.95rem;color:var(--amber-d)}
+.kpi span{font-size:.85rem;color:var(--mute)}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:8px 0 34px}
+.flow .f{background:var(--navy);color:#fff;padding:20px 18px;position:relative}
+.flow .f:first-child{border-radius:var(--r) 0 0 var(--r)}
+.flow .f:last-child{border-radius:0 var(--r) var(--r) 0}
+.flow .f+.f{border-left:1px solid rgba(255,255,255,.15)}
+.flow .f b{display:block;color:var(--amber);font-size:.8rem;letter-spacing:.1em;margin-bottom:4px}
+.flow .f h3{font-size:1.05rem;margin-bottom:4px}
+.flow .f p{font-size:.86rem;color:#c3d2e1}
+.subh{font-size:1.02rem;color:var(--navy);margin:34px 0 14px;font-weight:700}
+.chips.sm .chip{font-size:.86rem;padding:7px 14px;background:#fff;color:var(--navy);border:1px solid var(--line)}
+
+/* skills */
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stg{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;display:flex;gap:14px}
+.stg .n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--navy);color:var(--amber);display:grid;place-items:center;font-weight:800;font-size:.95rem}
+.stg .n.x{background:var(--amber);color:var(--navy)}
+.stg h3{font-size:.98rem;color:var(--navy);line-height:1.3;margin-bottom:3px}
+.stg p{font-size:.84rem;color:var(--mute);line-height:1.5}
+.pipes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pipe{background:var(--bg);border-left:4px solid var(--amber);border-radius:10px;padding:16px 18px}
+.pipe h3{font-size:.96rem;color:var(--navy);margin-bottom:3px}
+.pipe p{font-size:.86rem;color:var(--mute)}
+
+/* diary */
+.dhead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.admin-btn{background:none;border:1px solid var(--line);color:var(--mute);border-radius:999px;padding:7px 16px;font-size:.84rem;cursor:pointer;font-family:inherit}
+.admin-btn:hover{border-color:var(--amber);color:var(--amber-d)}
+.posts{display:grid;gap:16px;max-width:780px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px}
+.post time{font-size:.8rem;color:var(--amber-d);font-weight:700;letter-spacing:.04em}
+.post h3{font-size:1.18rem;color:var(--navy);margin:4px 0 10px;line-height:1.4}
+.post .body{color:#364353;font-size:.97rem;white-space:pre-wrap;word-break:break-word}
+.post .body.clamp{display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.post .tg{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.post .tg span{font-size:.78rem;background:#fff4e0;color:var(--amber-d);padding:3px 10px;border-radius:999px;font-weight:600}
+.post .acts{display:flex;gap:10px;margin-top:12px}
+.post .acts button{background:none;border:0;color:var(--mute);font-size:.84rem;cursor:pointer;padding:0;font-family:inherit;text-decoration:underline}
+.empty{background:var(--card);border:1px dashed var(--line);border-radius:var(--r);padding:36px 24px;text-align:center;color:var(--mute);max-width:780px}
+.modal{position:fixed;inset:0;background:rgba(8,23,38,.62);display:none;align-items:flex-start;justify-content:center;z-index:100;overflow:auto;padding:40px 16px}
+.modal.on{display:flex}
+.mbox{background:#fff;border-radius:18px;width:100%;max-width:640px;padding:26px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.mbox h3{color:var(--navy);margin-bottom:6px;font-size:1.2rem}
+.mbox label{display:block;font-size:.84rem;font-weight:700;color:var(--navy);margin:14px 0 5px}
+.mbox input,.mbox textarea{width:100%;border:1px solid #cfd7e0;border-radius:10px;padding:11px 13px;font:inherit;font-size:.95rem;color:var(--ink)}
+.mbox textarea{min-height:220px;resize:vertical;line-height:1.6}
+.mbox .hint{font-size:.8rem;color:var(--mute);margin-top:5px;line-height:1.5}
+.mbox .row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.mbox .btn{padding:11px 22px;font-size:.92rem;border:0;cursor:pointer;font-family:inherit}
+.mbox .btn.sec{background:#eef1f5;color:var(--navy)}
+.mbox .msg{font-size:.86rem;margin-top:12px;min-height:1.2em}
+.mbox .msg.err{color:#c0392b}.mbox .msg.ok{color:#1e8449}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(22px);transition:.7s}
 .rv.on{opacity:1;transform:none}
@@ -134,7 +206,17 @@ footer a{color:var(--amber)}
   .stats .grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .cards,.eval,.steps{grid-template-columns:1fr}
+  .cards,.eval,.steps,.pipes,.stages{grid-template-columns:1fr}
+  .shelf{grid-template-columns:repeat(2,1fr)}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:1fr}
+  .flow .f,.flow .f:first-child,.flow .f:last-child{border-radius:0}
+  .flow .f:first-child{border-radius:var(--r) var(--r) 0 0}
+  .flow .f:last-child{border-radius:0 0 var(--r) var(--r)}
+  .flow .f+.f{border-left:0;border-top:1px solid rgba(255,255,255,.15)}
+  .menu-btn{display:block}
+  .nav-cta{display:none}
+  nav{position:relative}
   section{padding:64px 0}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
@@ -149,14 +231,16 @@ footer a{color:var(--amber)}
         <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" fill="none" stroke="#f2a93b" stroke-width="6"/><path d="M50 14 62 50 50 86 38 50Z" fill="#f2a93b"/></svg>
         스타트업 나침반
       </a>
-      <ul>
+      <ul id="menu">
         <li><a href="#about">소개</a></li>
         <li><a href="#expertise">전문분야</a></li>
-        <li><a href="#evaluator">평가위원</a></li>
-        <li><a href="#career">경력</a></li>
-        <li><a href="#process">진행방식</a></li>
-        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#books">전자책</a></li>
+        <li><a href="#workspace">멘토 워크스페이스</a></li>
+        <li><a href="#skills">스킬·AI</a></li>
+        <li><a href="#diary">나침반 노트</a></li>
+        <li><a href="#contact">문의</a></li>
       </ul>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false">☰</button>
       <a href="#contact" class="nav-cta">상담 문의</a>
     </nav>
   </div>
@@ -288,8 +372,96 @@ footer a{color:var(--amber)}
   </div>
 </section>
 
+<!-- BOOKS -->
+<section id="books">
+  <div class="wrap">
+    <div class="eyebrow">E-Books</div>
+    <h2>직접 집필한 실전 바이블 시리즈</h2>
+    <p class="lead">현장에서 1,800회 넘게 멘토링하며 반복해서 마주친 질문들을, 창업가가 혼자서도 따라 할 수 있는 실전 가이드 전자책으로 정리했습니다.</p>
+    <div class="shelf">
+      <div class="book rv"><div class="cv"><img src="covers/01-patent.jpg" alt="특허출원 바이블 표지" loading="lazy"></div><h3>특허출원 바이블</h3><p>특허 경험이 없는 창업자를 위한 4권 시리즈</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/02-poc-pom.jpg" alt="PoC·PoM 기술사업화 실전 바이블 표지" loading="lazy"></div><h3>PoC·PoM 기술사업화 실전 바이블</h3><p>TRL·CRL 병행 모델부터 B2G 공공조달, TIPS IR까지</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/03-modu.jpg" alt="모두의창업 합격설계도 표지" loading="lazy"></div><h3>모두의창업 합격설계도</h3><p>8문항 사업계획서부터 2라운드 IR까지</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/04-venture.jpg" alt="벤처인증은 설계다 표지" loading="lazy"></div><h3>벤처인증은 설계다</h3><p>신규 확인부터 재확인(연장)까지 혁신성장유형 실전</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/05-problem.jpg" alt="아이템보다 문제다 표지" loading="lazy"></div><h3>아이템보다 문제다</h3><p>고객 페인포인트 발굴 실전 바이블</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/06-journey.jpg" alt="여정을 그리면 사업이 보인다 표지" loading="lazy"></div><h3>여정을 그리면 사업이 보인다</h3><p>고객 여정 지도로 사업을 설계하는 실전 바이블</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/07-invest.jpg" alt="투자받을 이유를 설계하라 표지" loading="lazy"></div><h3>투자받을 이유를 설계하라</h3><p>초기 스타트업의 투자유치·IR 실전 바이블</p></div>
+      <div class="book rv"><div class="cv"><img src="covers/08-evaluator.jpg" alt="평가위원은 3분 안에 결정한다 표지" loading="lazy"></div><h3>평가위원은 3분 안에 결정한다</h3><p>PSST 방식으로 쓰는 창업 사업계획서 가이드</p></div>
+    </div>
+    <p class="note">전자책은 스타트업 나침반 멘토링과 강의 자료로 활용되고 있습니다. 자료 문의는 아래 문의하기로 연락 주세요.</p>
+  </div>
+</section>
+
+<!-- WORKSPACE -->
+<section id="workspace" class="alt">
+  <div class="wrap">
+    <div class="eyebrow">Mentor Workspace</div>
+    <h2>멘토링을 ‘기록되는 자산’으로 만드는 방식</h2>
+    <p class="lead">한 번의 상담으로 끝나지 않도록, 진단부터 콘텐츠 자산화까지 하나의 표준 흐름으로 운영합니다. 멘티와 기업 정보는 비공개 원칙에 따라 익명·통계 중심으로만 소개합니다.</p>
+    <div class="kpis">
+      <div class="kpi rv"><b>1,800<small>회+</small></b><span>누적 멘토링</span></div>
+      <div class="kpi rv"><b>700<small>건+</small></b><span>기술사업화 컨설팅</span></div>
+      <div class="kpi rv"><b>8<small>종</small></b><span>집필 전자책</span></div>
+      <div class="kpi rv"><b>v4</b><span>나침반 멘토 워크스페이스</span></div>
+    </div>
+    <div class="flow rv">
+      <div class="f"><b>STEP 1</b><h3>진단</h3><p>소크라테스식 질문으로 현재 단계와 막힌 지점을 특정합니다.</p></div>
+      <div class="f"><b>STEP 2</b><h3>멘토링</h3><p>해당 단계의 프레임워크와 평가 관점을 적용해 실행안을 만듭니다.</p></div>
+      <div class="f"><b>STEP 3</b><h3>기록</h3><p>세션 리포트와 다음 과제를 정리해 진행 이력을 남깁니다.</p></div>
+      <div class="f"><b>STEP 4</b><h3>자산화</h3><p>반복되는 질문은 전자책·블로그·영상 콘텐츠로 환원합니다.</p></div>
+    </div>
+    <div class="subh">멘토링 분야 (익명 요약)</div>
+    <div class="chips sm">
+      <span class="chip">IoT·안전 솔루션</span><span class="chip">제조 AX·스마트팩토리</span><span class="chip">AI·로보틱스</span><span class="chip">디지털헬스케어</span>
+      <span class="chip">B2G·공공조달</span><span class="chip">콘텐츠·브랜드</span><span class="chip">플랫폼·O2O</span><span class="chip">에너지·소재</span>
+    </div>
+    <div class="subh">나침반 멘토 워크스페이스 v4</div>
+    <p style="color:#3a4756;max-width:720px">멘토링 현장에서 바로 쓰는 스킬 실행 허브입니다. 창업 단계별 로드맵 9개 트랙, 즐겨찾기와 자주 쓰는 스킬, 세션 이력 기록, 프롬프트 복사 방식 실행까지 한 화면에서 이어집니다. 내부 도구로 운영하며 외부에는 요약만 공개합니다.</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="eyebrow">Skills &amp; AI</div>
+    <h2>AI 스킬·에이전트로 컨설팅을 시스템화합니다</h2>
+    <p class="lead">반복되는 컨설팅 업무를 개인 스킬과 자동화로 구조화했습니다. 단순히 AI를 연결하는 것이 아니라, 한국 정부지원·심사 맥락에 맞춘 프롬프트와 업무 흐름을 직접 설계해 운영합니다.</p>
+    <div class="kpis">
+      <div class="kpi rv"><b>81<small>종</small></b><span>개인 제작 스킬</span></div>
+      <div class="kpi rv"><b>17<small>종</small></b><span>연계 플러그인</span></div>
+      <div class="kpi rv"><b>7+2</b><span>창업 단계 + 공통·멘토 트랙</span></div>
+      <div class="kpi rv"><b>4<small>개</small></b><span>표준 체이닝 파이프라인</span></div>
+    </div>
+    <div class="subh">창업 단계별 스킬 로드맵</div>
+    <div class="stages">
+      <div class="stg rv"><div class="n">1</div><div><h3>아이디어 발굴·구체화</h3><p>막연한 아이디어를 검증 가능한 사업 가설로 구조화</p></div></div>
+      <div class="stg rv"><div class="n">2</div><div><h3>고객·시장 검증</h3><p>가설을 데이터와 고객 목소리로 입증 (CPF→PSF)</p></div></div>
+      <div class="stg rv"><div class="n">3</div><div><h3>사업계획서·정부지원</h3><p>검증 결과를 심사에 통과하는 문서로 전환</p></div></div>
+      <div class="stg rv"><div class="n">4</div><div><h3>초기 사업화·MVP·IP</h3><p>계획을 작동하는 제품과 보호 가능한 자산으로 전환</p></div></div>
+      <div class="stg rv"><div class="n">5</div><div><h3>마케팅·고객 확보</h3><p>첫 100명의 고객과 반복 가능한 획득 채널 확보</p></div></div>
+      <div class="stg rv"><div class="n">6</div><div><h3>투자유치</h3><p>트랙션을 투자 언어로 번역해 자금 조달</p></div></div>
+      <div class="stg rv"><div class="n">7</div><div><h3>스케일업·AX 전환</h3><p>반복 가능한 성장 시스템과 AI 운영 체계 구축</p></div></div>
+      <div class="stg rv"><div class="n x">+</div><div><h3>공통 인프라 트랙</h3><p>문서·시각화·품질 게이트를 전 단계에 수평 적용</p></div></div>
+      <div class="stg rv"><div class="n x">+</div><div><h3>멘토 운영 트랙</h3><p>평가·교육·콘텐츠 업무 전용 스킬 묶음</p></div></div>
+    </div>
+    <div class="subh">표준 체이닝 파이프라인</div>
+    <div class="pipes">
+      <div class="pipe rv"><h3>검증 → 지원사업 풀 파이프라인</h3><p>아이디어 진단부터 정부지원사업 제출까지, 예창패·초창패 표준 흐름</p></div>
+      <div class="pipe rv"><h3>투자유치 파이프라인</h3><p>준비도 진단부터 투자자 타겟팅까지, 시드·시리즈A IR 표준 흐름</p></div>
+      <div class="pipe rv"><h3>대외 문서 3단 공정</h3><p>본문 작성 → AI 티 제거 → 문서 포맷 변환, 모든 제출 문서에 적용하는 품질 게이트</p></div>
+      <div class="pipe rv"><h3>멘토링 1회차 표준</h3><p>진단 → 멘토링 → 기록 → 콘텐츠 자산화까지 이어지는 세션 표준</p></div>
+    </div>
+    <div class="subh">에이전트·자동화</div>
+    <div class="cards">
+      <div class="card rv"><div class="ico">🗓️</div><h3>주간 브리핑 자동화</h3><p>매주 정해진 시간에 핵심 이슈와 실행 과제를 정리해 발행하는 개인 자문 시스템을 운영합니다.</p></div>
+      <div class="card rv"><div class="ico">✍️</div><h3>콘텐츠 자동 생성·발행</h3><p>스타트업·중소기업 대상 블로그 콘텐츠를 카테고리별로 생성하고 발행하는 스킬을 구축했습니다.</p></div>
+      <div class="card rv"><div class="ico">🔗</div><h3>스킬 오케스트레이션</h3><p>진단·작성·검수·변환 스킬을 순서대로 연결해, 한 번의 요청으로 문서 완성까지 이어지게 설계합니다.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- PROCESS -->
-<section id="process">
+<section id="process" class="alt">
   <div class="wrap">
     <div class="eyebrow">How I Work</div>
     <h2>이렇게 진행합니다</h2>
@@ -304,7 +476,7 @@ footer a{color:var(--amber)}
 </section>
 
 <!-- CONTENT -->
-<section class="alt">
+<section>
   <div class="wrap" style="text-align:center">
     <div class="eyebrow">Content</div>
     <h2>유튜브 채널 AX_Best</h2>
@@ -312,6 +484,21 @@ footer a{color:var(--amber)}
     <div class="btns" style="justify-content:center">
       <a class="btn primary" href="https://www.youtube.com/channel/UCNK7wjuAeaUgj_ct1Nemlvg" target="_blank" rel="noopener">AX_Best 채널 바로가기</a>
     </div>
+  </div>
+</section>
+
+<!-- DIARY -->
+<section id="diary" class="alt">
+  <div class="wrap">
+    <div class="dhead">
+      <div>
+        <div class="eyebrow">Compass Note</div>
+        <h2 style="margin-bottom:6px">나침반 노트</h2>
+      </div>
+      <button class="admin-btn" id="adminOpen" type="button">✎ 글쓰기 (관리자)</button>
+    </div>
+    <p class="lead" style="margin-bottom:28px">현장에서 만난 질문과 생각, 멘토링 일기를 짧게 기록합니다.</p>
+    <div class="posts" id="posts"><div class="empty">글을 불러오는 중입니다…</div></div>
   </div>
 </section>
 
@@ -342,6 +529,30 @@ footer a{color:var(--amber)}
 </section>
 </main>
 
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mt">
+  <div class="mbox">
+    <h3 id="mt">나침반 노트 글쓰기</h3>
+    <p class="hint">관리자 전용 화면입니다. 방문자는 글을 읽을 수만 있습니다.</p>
+    <label for="fTok">GitHub 토큰 (처음 한 번만 입력)</label>
+    <input type="password" id="fTok" autocomplete="off" placeholder="github_pat_…">
+    <p class="hint">startup-compass 저장소의 Contents(읽기·쓰기) 권한만 가진 Fine-grained 토큰을 붙여넣으세요. 이 브라우저에만 저장되며 방문자에게 노출되지 않습니다.</p>
+    <label for="fTitle">제목</label>
+    <input id="fTitle" maxlength="120">
+    <label for="fDate">날짜</label>
+    <input id="fDate" type="date">
+    <label for="fTags">태그 (쉼표로 구분)</label>
+    <input id="fTags" placeholder="멘토링, AI, 일기">
+    <label for="fBody">본문</label>
+    <textarea id="fBody"></textarea>
+    <div class="row">
+      <button class="btn primary" id="fSave" type="button">저장(발행)</button>
+      <button class="btn sec" id="fClose" type="button">닫기</button>
+      <button class="btn sec" id="fLogout" type="button">토큰 삭제</button>
+    </div>
+    <div class="msg" id="fMsg" role="status"></div>
+  </div>
+</div>
+
 <footer>
   © <span id="y">2026</span> 스타트업 나침반 · 이 페이지는 <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>로 무료 호스팅되고 있습니다.
 </footer>
@@ -350,6 +561,116 @@ footer a{color:var(--amber)}
   document.getElementById('y').textContent = new Date().getFullYear();
   const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} }), {threshold:.12});
   document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  /* ── 모바일 메뉴 ── */
+  const mb = document.getElementById('menuBtn'), mu = document.getElementById('menu');
+  mb.addEventListener('click', () => { const o = mu.classList.toggle('open'); mb.setAttribute('aria-expanded', o); });
+  mu.addEventListener('click', e => { if (e.target.tagName === 'A') { mu.classList.remove('open'); mb.setAttribute('aria-expanded', 'false'); } });
+
+  /* ── 나침반 노트 (posts.json 기반, 관리자만 GitHub API로 저장) ── */
+  const REPO = 'enochlee0-hub/startup-compass', FILE = 'posts.json', BRANCH = 'main';
+  const API = 'https://api.github.com/repos/' + REPO + '/contents/' + FILE;
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const tok = () => { try { return localStorage.getItem('nc_token') || ''; } catch (e) { return ''; } };
+  const setTok = v => { try { v ? localStorage.setItem('nc_token', v) : localStorage.removeItem('nc_token'); } catch (e) {} };
+  const hdr = () => ({ Authorization: 'Bearer ' + tok(), Accept: 'application/vnd.github+json' });
+  const b64e = s => { let x = ''; new TextEncoder().encode(s).forEach(c => x += String.fromCharCode(c)); return btoa(x); };
+  const b64d = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g, '')), c => c.charCodeAt(0)));
+  const today = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+  let posts = [], editId = null;
+
+  function render() {
+    const box = $('posts'), admin = !!tok();
+    if (!posts.length) { box.innerHTML = '<div class="empty">아직 올라온 글이 없습니다. 곧 첫 글이 올라옵니다.</div>'; return; }
+    box.innerHTML = posts.slice().sort((a, b) => ((b.date || '') + b.id).localeCompare((a.date || '') + a.id)).map(p => {
+      const long = (p.body || '').length > 260;
+      return '<article class="post" data-id="' + esc(p.id) + '"><time>' + esc(p.date || '') + '</time><h3>' + esc(p.title) + '</h3>' +
+        '<div class="body' + (long ? ' clamp' : '') + '">' + esc(p.body || '') + '</div>' +
+        (long ? '<div class="acts"><button data-act="more" type="button">더 보기</button></div>' : '') +
+        ((p.tags && p.tags.length) ? '<div class="tg">' + p.tags.map(t => '<span>#' + esc(t) + '</span>').join('') + '</div>' : '') +
+        (admin ? '<div class="acts"><button data-act="edit" type="button">수정</button><button data-act="del" type="button">삭제</button></div>' : '') +
+        '</article>';
+    }).join('');
+  }
+
+  async function fetchRemote() {
+    const r = await fetch(API + '?ref=' + BRANCH + '&t=' + Date.now(), { headers: hdr(), cache: 'no-store' });
+    if (r.status === 404) return { list: [], sha: null };
+    if (r.status === 401 || r.status === 403) throw new Error('토큰 권한을 확인해 주세요 (' + r.status + ').');
+    if (!r.ok) throw new Error('불러오기 실패 (' + r.status + ')');
+    const j = await r.json();
+    return { list: JSON.parse(b64d(j.content)), sha: j.sha };
+  }
+  async function pushRemote(list, sha, msg) {
+    const body = { message: msg, content: b64e(JSON.stringify(list, null, 2)), branch: BRANCH };
+    if (sha) body.sha = sha;
+    const r = await fetch(API, { method: 'PUT', headers: Object.assign({ 'Content-Type': 'application/json' }, hdr()), body: JSON.stringify(body) });
+    if (!r.ok) { let m = ''; try { m = (await r.json()).message; } catch (e) {} throw new Error('저장 실패 (' + r.status + ') ' + m); }
+  }
+  function say(t, cls) { const m = $('fMsg'); m.textContent = t; m.className = 'msg ' + (cls || ''); }
+
+  function openModal(p) {
+    editId = p ? p.id : null;
+    $('mt').textContent = p ? '글 수정' : '나침반 노트 글쓰기';
+    $('fTitle').value = p ? p.title : '';
+    $('fDate').value = p ? (p.date || today()) : today();
+    $('fTags').value = p && p.tags ? p.tags.join(', ') : '';
+    $('fBody').value = p ? (p.body || '') : '';
+    $('fTok').value = '';
+    $('fTok').placeholder = tok() ? '저장된 토큰 사용 중 (바꾸려면 새로 붙여넣기)' : 'github_pat_…';
+    say('');
+    $('modal').classList.add('on');
+    setTimeout(() => (tok() ? $('fTitle') : $('fTok')).focus(), 30);
+  }
+  const closeModal = () => $('modal').classList.remove('on');
+
+  $('adminOpen').addEventListener('click', () => openModal(null));
+  $('fClose').addEventListener('click', closeModal);
+  $('modal').addEventListener('click', e => { if (e.target === $('modal')) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  $('fLogout').addEventListener('click', () => { setTok(''); say('토큰을 이 브라우저에서 삭제했습니다.', 'ok'); render(); });
+
+  $('fSave').addEventListener('click', async () => {
+    const t = $('fTok').value.trim(); if (t) setTok(t);
+    if (!tok()) return say('GitHub 토큰을 먼저 붙여넣어 주세요.', 'err');
+    const title = $('fTitle').value.trim(), body = $('fBody').value.trim();
+    if (!title || !body) return say('제목과 본문을 입력해 주세요.', 'err');
+    const item = { id: editId || Date.now().toString(36), date: $('fDate').value || today(), title, body,
+      tags: $('fTags').value.split(',').map(s => s.trim()).filter(Boolean) };
+    $('fSave').disabled = true; say('저장 중…');
+    try {
+      const { list, sha } = await fetchRemote();
+      const i = list.findIndex(x => x.id === item.id);
+      i >= 0 ? list[i] = item : list.push(item);
+      await pushRemote(list, sha, (editId ? '글 수정: ' : '새 글: ') + title);
+      posts = list; render();
+      say('저장되었습니다. 방문자 화면에는 1~2분 뒤 반영됩니다.', 'ok');
+      setTimeout(closeModal, 1400);
+    } catch (e) { say(e.message, 'err'); }
+    $('fSave').disabled = false;
+  });
+
+  $('posts').addEventListener('click', async e => {
+    const b = e.target.closest('button[data-act]'); if (!b) return;
+    const card = b.closest('.post'), id = card.dataset.id, act = b.dataset.act;
+    if (act === 'more') { card.querySelector('.body').classList.toggle('clamp'); b.textContent = b.textContent === '더 보기' ? '접기' : '더 보기'; return; }
+    const p = posts.find(x => x.id === id); if (!p) return;
+    if (act === 'edit') return openModal(p);
+    if (act === 'del' && confirm('이 글을 삭제할까요?')) {
+      try {
+        const { list, sha } = await fetchRemote();
+        await pushRemote(list.filter(x => x.id !== id), sha, '글 삭제: ' + p.title);
+        posts = posts.filter(x => x.id !== id); render();
+      } catch (err) { alert(err.message); }
+    }
+  });
+
+  (async () => {
+    try { const r = await fetch(FILE + '?t=' + Date.now(), { cache: 'no-store' }); posts = r.ok ? await r.json() : []; } catch (e) { posts = []; }
+    render();
+    if (tok()) { try { posts = (await fetchRemote()).list; render(); } catch (e) {} }
+  })();
 </script>
 </body>
 </html>
